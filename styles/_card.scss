@@ -1,0 +1,109 @@
+.container {
+    // padding: 100rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2.4rem 1.5rem;
+    background-color: $Cream;
+
+    .card-container {
+        border-radius: 1rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .brand-image {
+            height: 100% ;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            border-radius: 1rem;
+    
+            img {
+            border-radius: 1rem;
+
+                object-fit: cover;
+                overflow: hidden;
+                max-width: 100%;
+                max-height: 100%;
+            }
+        }
+
+        .product-info-container {
+            background-color: white;
+            padding: 2.5rem;
+            .product-name {
+                text-transform: uppercase;
+                font-family: $font-monserrat;
+                font-size: 1.3rem;
+                letter-spacing: 0.4rem;
+                // margin-top: ;
+            }
+
+            .title {
+                margin-top: 0.9rem;
+
+                font-size: 3.2rem;
+                font-family: $font-fraunces;
+                line-height: 3.3rem;
+            }
+
+            .description {
+                margin-top: 1.8rem;
+                
+                font-size: 1.35rem;
+                font-weight: bold;
+                line-height: 2.2rem;
+
+                color: $Dark-grayish-blue;
+            }
+
+            .price-container {
+                display: inline-flex;
+                align-items: center;
+                
+                margin-top: 2.3rem;
+                gap: 1.9rem;
+
+                .price {
+                    
+                    font-size: 3.2rem;
+                    font-weight: bold;
+                    font-family: $font-fraunces;
+
+                    color: $Dark-cyan;
+                }
+                .old-price {
+                    font-size: 1.3rem;
+                    font-weight: bold;
+                    color: $Dark-grayish-blue;
+                }
+            }
+
+            .btn {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-top: 1.7rem;
+                width: 100%;
+                padding: 1.6rem;
+                border-radius: 1rem;
+                background-color: $Dark-cyan;
+                font-weight: bold;
+                font-size: 1.4rem;
+                gap: 1rem;
+
+                text-align: center;
+                color: white;
+            }
+        }
+
+
+    }
+
+
+}
