@@ -12,6 +12,10 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+.hidden {
+  display: none;
+}
+
 .container {
   display: flex;
   justify-content: center;
@@ -21,6 +25,7 @@ body {
 }
 .container .card-container {
   border-radius: 1rem;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -31,15 +36,16 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  border-radius: 1rem;
+  overflow: hidden;
 }
-.container .card-container .brand-image img {
-  border-radius: 1rem;
+.container .card-container .brand-image .image-mobile {
   -o-object-fit: cover;
      object-fit: cover;
-  overflow: hidden;
   max-width: 100%;
-  max-height: 100%;
+  height: auto;
+}
+.container .card-container .brand-image .image-web {
+  display: none;
 }
 .container .card-container .product-info-container {
   background-color: white;
@@ -95,4 +101,52 @@ body {
   gap: 1rem;
   text-align: center;
   color: white;
+  cursor: pointer;
+}
+.container .card-container .product-info-container .btn:hover {
+  filter: brightness(50%);
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+  }
+  .container .card-container {
+    display: flex;
+    flex-direction: row;
+    height: 45rem;
+    width: 60rem;
+    z-index: 5;
+    overflow: hidden;
+  }
+  .container .card-container .brand-image {
+    width: 50%;
+  }
+  .container .card-container .brand-image .image-mobile {
+    display: none;
+  }
+  .container .card-container .brand-image .image-web {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .container .card-container .product-info-container {
+    width: 50%;
+    height: 100%;
+    padding: 2.8rem 3.1rem;
+  }
+  .container .card-container .product-info-container .title {
+    margin-top: 2rem;
+  }
+  .container .card-container .product-info-container .description {
+    margin-top: 2rem;
+    line-height: 2.3rem;
+  }
+  .container .card-container .product-info-container .price-container {
+    margin-top: 2.5rem;
+  }
+  .container .card-container .product-info-container .btn {
+    margin-top: 2.7rem;
+  }
 }/*# sourceMappingURL=styles.css.map */

@@ -9,7 +9,7 @@
 
     .card-container {
         border-radius: 1rem;
-
+        overflow: hidden;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -20,16 +20,17 @@
             width: 100%;
             display: flex;
             justify-content: center;
-
-            border-radius: 1rem;
+            overflow: hidden;
     
-            img {
-            border-radius: 1rem;
+            .image-mobile {
 
                 object-fit: cover;
-                overflow: hidden;
                 max-width: 100%;
-                max-height: 100%;
+                height: auto;
+            }
+
+            .image-web {
+                display: none;
             }
         }
 
@@ -99,6 +100,11 @@
 
                 text-align: center;
                 color: white;
+                cursor: pointer;
+
+                &:hover {
+                    filter: brightness(50%);
+                }
             }
         }
 
